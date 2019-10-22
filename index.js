@@ -60,7 +60,7 @@ function main() {
   if (!fs.existsSync("./" + resultFolderName + "/")) {
     fs.mkdirSync("./" + resultFolderName + "/");
   }
-  // Считывает все файлы и запускает функцию formatDocument для каждого файла:
+  // Считывает все файлы корпуса и запускает функцию formatDocument для каждого файла:
   readFiles(corpusFolderName + "/", formatDocument, function(err) {
     throw err;
   });
