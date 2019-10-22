@@ -1,9 +1,3 @@
-// Скрипт для форматирования корпусов.
-// Для использования скрипта требуется установить Node.js
-// 1) Положить исходные файлы в папку corpus
-// 2) Запустить команду node index.js
-// 3) Результат появится в папке results
-
 var corpusFolderName = "corpus";
 var resultFolderName = "results";
 
@@ -55,7 +49,7 @@ function deleteLineBreaks(str) {
 function formatDocument(filename, content) {
   // Удаляем множественные пробелы:
   var newLine = content.replace(/ + /g, " ");
-  // Удаляем нумирацию страниц:
+  // Удаляем нумерацию страниц:
   newLine = newLine.replace(/(\s){2,}\d+\n/g, "");
   // Удаляем одиночные переносы строк:
   newLine = deleteLineBreaks(newLine);
